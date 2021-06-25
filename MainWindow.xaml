@@ -1,0 +1,30 @@
+﻿<Window x:Class="ServerHost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServerHost"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label  Grid.Column="0" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="StatusText">Offline</Label>
+            <Label  Grid.Column="1" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="ConnectionText">Connections: 0</Label>
+
+        </Grid>
+        <Label Grid.Row="0" Grid.Column="0" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Bottom">Server Status:</Label>
+        <Button Grid.Column="1" Grid.Row="1" Content="Start Server" Height="50" Width="100" Click="StartServer"/>
+    </Grid>
+</Window>
